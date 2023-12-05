@@ -25,14 +25,14 @@ function Login({parentData}) {
             }
 
             else if(res.data=='password_wrong'){
-                setError(<div className='alert alert-danger'><b>Invalid Password</b> </div>)
+                setError(<div className='alert alert-danger m-2'><b>Invalid Password</b> </div>)
 
                 setTimeout(() => {
                     setError("");
                 }, 3000);
             }
             else if(res.data=='wrong_name'){
-                setError(<div className='alert alert-danger'><b>Invalid Username</b> </div>)
+                setError(<div className='alert alert-danger m-2'><b>Invalid Username</b> </div>)
 
                 setTimeout(() => {
                     setError("");
