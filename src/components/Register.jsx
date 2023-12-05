@@ -70,6 +70,9 @@ function Register() {
                     <input className='btnn' type="submit" value="Register" />
                 </form>
             </div>
+            <footer>
+            <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
+        </footer>
         </center>
     )
 }

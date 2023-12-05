@@ -61,6 +61,9 @@ function AllBlogs({username}) {
                 )) : <div className='alert alert-warning'>🙁 Nobody posted a blog</div>}
             </div>
 
+            <footer>
+            <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
+        </footer>
 
         </div>
         

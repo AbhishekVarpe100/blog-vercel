@@ -38,6 +38,9 @@ function CreateBlog({ username }) {
                     <input className='btn btn-light' type="submit" value="Publish blog" />
                 </form>
             </center>
+            <footer>
+            <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
+        </footer>
 
         </div>
     )

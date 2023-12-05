@@ -59,6 +59,9 @@ function Edit({ username }) {
                     <input className='btn btn-light' type="submit" value="Edit blog" />
 
                 </form>
+                <footer>
+            <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
+        </footer>
             </center>
 
         </div>

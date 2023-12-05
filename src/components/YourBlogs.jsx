@@ -64,7 +64,9 @@ function YourBlogs({username}) {
 
                 )) : <div className='alert alert-warning'>🙁 Oops! <i> <b>You haven't posted any blog yet</b> </i> </div>}
             </div>
-
+            <footer>
+            <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
+        </footer>
 
         </div>
         
