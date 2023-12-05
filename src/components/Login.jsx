@@ -64,7 +64,11 @@ function Login({parentData}) {
                     <button type="submit" className="btnn">Login</button>
                 </form>
             </div>
+            <footer>
+            <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
+        </footer>
         </center>
+        
         
     )
 }
