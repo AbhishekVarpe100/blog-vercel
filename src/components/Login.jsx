@@ -50,7 +50,7 @@ function Login({parentData}) {
                 <h3>Login</h3>
                 {login}
                 {error}
-                <marquee><big>Welcome user! <b>login here to continue</b> </big></marquee>
+                <marquee><big>Welcome user! <b>login here to continue.</b> </big></marquee>
                 <form onSubmit={handleSubmit} className='m-4 bshadow p-4'>
                     <div className="mb-3">
                         <input required onChange={(e)=>setName(e.target.value)} placeholder='Enter username' type="text" className="form-control" />
