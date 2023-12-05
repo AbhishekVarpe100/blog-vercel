@@ -1,0 +1,22 @@
+.bshadow{
+    box-shadow: 4px 6px 10px 4px rgb(188, 179, 179);
+    background-color: gainsboro;
+    border-radius: 4px;
+}
+.btnn{
+    background-color: rgb(87, 87, 178);
+    border-radius: 4px;
+    color: white;
+}
+
+.rounded{
+    background-image: linear-gradient(to left,pink,skyblue);
+}
+
+.bl{
+    box-shadow: 4px 6px 10px 4px rgb(188, 179, 179);
+    background-color: gainsboro;
+    border-radius: 4px;
+    color: black;
+    margin: 5px;
+}
