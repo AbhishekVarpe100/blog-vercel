@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
+import './Shadow.css';
 function CreateBlog({ username }) {
 
     const [blogname,setBLogName]=useState('');
     const [description,setDescription]=useState('');
-
     const handleSubmit=(e)=>{
         e.preventDefault();
         // const formData=new FormData();
@@ -30,7 +30,7 @@ function CreateBlog({ username }) {
     }
     return (
         <div>
-            <center className='p-2 m-2' style={{'background':'pink'}}>
+            <center className='p-2 m-2' id='center'>
                 <form onSubmit={handleSubmit}>
                     <input value={blogname} required onChange={(e)=>setBLogName(e.target.value)} className='form-control' placeholder='Enter blog title' type="text" /><br />
                     <textarea value={description} required onChange={(e)=>setDescription(e.target.value)} className='form-control' placeholder='Blog description' cols="30" rows="10"></textarea><br />

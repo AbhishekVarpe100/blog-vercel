@@ -3,7 +3,9 @@ import { Outlet, Link } from 'react-router-dom';
 function Home({ username }) {
     return (
         <>
-            {username != null ? <div className='m-4'> <h1>Hello {username} </h1> <span><Link to='/'>Logout</Link></span>
+            {username != null ? <div className='m-4'> <h1>Hello <b><u className='text-success'>{username}</u> </b> 😊</h1> <span><Link to='/' title='logout'>Logout</Link></span>
+            <hr />
+            <div><i>Post a blog, new ideas with people to explore new things.</i></div>
                 <hr />
                 <div className='d-flex justify-content-around'>
                     <Link className='btn btn-dark' to='/home/'>All blogs</Link>

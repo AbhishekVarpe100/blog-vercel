@@ -1,6 +1,6 @@
 .bshadow{
     box-shadow: 4px 6px 10px 4px rgb(188, 179, 179);
-    background-color: gainsboro;
+    background-image: linear-gradient(to left,aliceblue,rgb(179, 197, 179));
     border-radius: 4px;
 }
 .btnn{
@@ -15,8 +15,11 @@
 
 .bl{
     box-shadow: 4px 6px 10px 4px rgb(188, 179, 179);
-    background-color: gainsboro;
+    background-color: aliceblue;
     border-radius: 4px;
     color: black;
     margin: 5px;
+}
+#center{
+    background-color: aliceblue;
 }

@@ -6,7 +6,7 @@
 }   
 
 .heading{
-    background-image: linear-gradient(to top,rgb(53, 50, 147),rgb(234, 216, 234));
+    background-image: linear-gradient(to top,rgb(100, 111, 72),rgb(209, 245, 27));
     /* border-radius: 0px 0px 500px 100px; */
 
 }
@@ -29,10 +29,10 @@
     transform: scale(1.02);
     transition: transform 1s ease-in-out;
 }
-.myimagetemplate2:hover{
+/* .myimagetemplate2:hover{
     transform: scale(1.02);
     transition: transform 1s ease-in-out;
-}
+} */
 .classofgradient{
     background-image: linear-gradient(to top,gray,black);
     color: white;
