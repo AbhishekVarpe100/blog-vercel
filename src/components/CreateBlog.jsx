@@ -35,7 +35,7 @@ function CreateBlog({ username }) {
                     <input value={blogname} required onChange={(e)=>setBLogName(e.target.value)} className='form-control' placeholder='Enter blog title' type="text" /><br />
                     <textarea value={description} required onChange={(e)=>setDescription(e.target.value)} className='form-control' placeholder='Blog description' cols="30" rows="10"></textarea><br />
                     <br />
-                    <input className='btn btn-light' type="submit" value="Publish blog" />
+                    <input className='btn btn-dark' type="submit" value="Publish blog" />
                 </form>
             </center>
             <footer>
