@@ -22,4 +22,6 @@
 }
 #center{
     background-color: aliceblue;
+    box-shadow: 3px 3px 8px 3px rgb(175, 170, 180);
+    border-radius: 4px;
 }
