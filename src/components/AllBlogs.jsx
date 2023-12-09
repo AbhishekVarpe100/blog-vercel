@@ -114,16 +114,36 @@ function AllBlogs({ username }) {
                   </b>
                   {item.description}
                 </p>
+
+<div className="d-flex justify-content-around">
+<span>
                 <h3 onClick={() => handleLike(item.username, item.blogname)}>
                   <span>
                     <i
                       title="Like"
-                      className="fa-solid fa-thumbs-up"
+                      className="fa-regular fa-thumbs-up"
                       id="like"
                     ></i>
                   </span>
                 </h3>{" "}
                 <span>like</span>
+
+</span>
+<span>
+                <h3 onClick={() => handleLike(item.username, item.blogname)}>
+                  <span>
+                    <i
+                      title="Like"
+                      className="fa-regular fa-thumbs-down"
+                      id="like"
+                    ></i>
+                  </span>
+                </h3>{" "}
+                <span>dislike</span>
+
+</span>
+</div>
+
                 <p className="">
                   <small>how many likes ?{" "}</small>
                   
