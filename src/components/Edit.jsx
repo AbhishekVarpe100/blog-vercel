@@ -51,13 +51,13 @@ function Edit({ username }) {
     return (
         <div>
             
-            <center className='m-2 p-2' style={{'background':'pink'}} id='center'>
+            <center className='m-2 p-2' id='center'>
                 <h3><i>Edit Blog</i></h3>   
                 
                 <form onSubmit={handleSubmit}>
                     <input value={blogname} required onChange={(e)=>setBLogName(e.target.value)} className='form-control' placeholder='Enter blog title' type="text" /><br />
                     <textarea value={description} required onChange={(e)=>setDescription(e.target.value)} className='form-control' placeholder='Blog description' cols="30" rows="10"></textarea><br />
-                    <input className='btn btn-light' type="submit" value="Edit blog" />
+                    <input className='btn btn-dark' type="submit" value="Edit blog" />
 
                 </form>
                 <footer>
