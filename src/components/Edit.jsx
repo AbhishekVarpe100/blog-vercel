@@ -29,7 +29,7 @@ function Edit({ username }) {
         // formData.append('description',description)
         // formData.append('id',id)
 
-        axios.post('http://localhost:5000/update',{username,blogname,description,id})
+        axios.post('https://abhishekvarpeblog.vercel.app/update',{username,blogname,description,id})
         .then(res=>{
             if(res.data=='updated'){
                 alert("Blog updated successfully")

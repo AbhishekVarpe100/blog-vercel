@@ -11,7 +11,7 @@ function AllBlogs({ username }) {
   var [blog,setblogName]=useState('');
   const blogData = () => {
     axios
-      .get("http://localhost:5000/getblogs")
+      .get("https://abhishekvarpeblog.vercel.app/getblogs")
       .then((blog) => {
         setBlog(blog.data);
       })
@@ -24,7 +24,7 @@ function AllBlogs({ username }) {
 
   const handleDelete = (id, username) => {
     axios
-      .post("http://localhost:5000/deleteblog", { id, username })
+      .post("https://abhishekvarpeblog.vercel.app/deleteblog", { id, username })
       .then((res) => {
         if (res.data == "deleted") {
           alert("Deleted");
@@ -37,7 +37,7 @@ function AllBlogs({ username }) {
 
 
   const like=(userName,blogname)=>{
-    axios.post("http://localhost:5000/getlikes",{userName,blogname})
+    axios.post("https://abhishekvarpeblog.vercel.app/getlikes",{userName,blogname})
           .then((res) => {
             likeCount(res.data.likeCount);
             // setUser(res.data.userName);
@@ -56,7 +56,7 @@ function AllBlogs({ username }) {
 
   const handleLike = async (userName, blogname) => {
     await axios
-      .post("http://localhost:5000/like", { username, userName, blogname });
+      .post("https://abhishekvarpeblog.vercel.app/like", { username, userName, blogname });
   };
 
 //   const getCount = () => {
