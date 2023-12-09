@@ -9,7 +9,7 @@ function Edit({ username }) {
     const [description,setDescription]=useState('');
 
     useEffect(()=>{
-        axios.post('https://abhishekvarpeblog.vercel.app/getblog/'+id)
+        axios.post('http://localhost:5000/getblog/'+id)
         .then(res=>{
             setBLogName(res.data.blogname);
             setDescription(res.data.description);
@@ -29,7 +29,7 @@ function Edit({ username }) {
         // formData.append('description',description)
         // formData.append('id',id)
 
-        axios.post('https://abhishekvarpeblog.vercel.app/update',{username,blogname,description,id})
+        axios.post('http://localhost:5000/update',{username,blogname,description,id})
         .then(res=>{
             if(res.data=='updated'){
                 alert("Blog updated successfully")

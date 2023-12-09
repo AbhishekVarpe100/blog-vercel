@@ -16,7 +16,7 @@ function Register() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const register = { name, email, password };
-        axios.post('https://abhishekvarpeblog.vercel.app/register', register)
+        axios.post('http://localhost:5000/register', register)
             .then(res => {
 
                 if (res.data == 'register') {

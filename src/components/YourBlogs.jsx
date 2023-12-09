@@ -9,7 +9,7 @@ function YourBlogs({username}) {
     const [data, setBlog] = useState([]);
 
     const blogData = () => {
-        axios.get('https://abhishekvarpeblog.vercel.app/getblog/'+username)
+        axios.get('http://localhost:5000/getblog/'+username)
             .then(blog => {
                 setBlog(blog.data)
             })

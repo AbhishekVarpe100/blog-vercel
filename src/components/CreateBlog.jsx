@@ -13,7 +13,7 @@ function CreateBlog({ username }) {
         // formData.append('blogname',blogname)
         // formData.append('description',description)
 
-        axios.post('https://abhishekvarpeblog.vercel.app/addblog',{username,blogname,description})
+        axios.post('http://localhost:5000/addblog',{username,blogname,description})
         .then(res=>{
             if(res.data=='added'){
                 alert("Blog added successfully")
@@ -41,7 +41,6 @@ function CreateBlog({ username }) {
             <footer>
             <center>&copy; <small>All rights reserved by <i><b>Abhishek Varpe</b></i></small> </center>
         </footer>
-
         </div>
     )
 }
