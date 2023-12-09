@@ -9,7 +9,7 @@ function Edit({ username }) {
     const [description,setDescription]=useState('');
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/getblog/'+id)
+        axios.post('https://abhishekvarpeblog.vercel.app/getblog/'+id)
         .then(res=>{
             setBLogName(res.data.blogname);
             setDescription(res.data.description);
