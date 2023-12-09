@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import axios from 'axios';
+import './Shadow.css';
 import { useNavigate, useParams } from 'react-router-dom';
 function Edit({ username }) {
     const {id}=useParams();
@@ -50,7 +51,7 @@ function Edit({ username }) {
     return (
         <div>
             
-            <center className='m-2 p-2' style={{'background':'pink'}}>
+            <center className='m-2 p-2' style={{'background':'pink'}} id='center'>
                 <h3><i>Edit Blog</i></h3>   
                 
                 <form onSubmit={handleSubmit}>
