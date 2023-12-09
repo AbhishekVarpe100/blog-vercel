@@ -125,7 +125,8 @@ function AllBlogs({ username }) {
                 </h3>{" "}
                 <span>like</span>
                 <p className="">
-                  how many likes ?{" "}
+                  <small>how many likes ?{" "}</small>
+                  
                   <u>
                      <span className="text-primary btn btn-sm " onClick={()=>like(item.username,item.blogname)}>see <i class="fa fa-eye" aria-hidden="true"></i></span>
                   </u>{" "}
@@ -167,7 +168,7 @@ function AllBlogs({ username }) {
           <small>
             All rights reserved by{" "}
             <i>
-              <b>Abhishek Varpe</b>
+              <b>abc</b>
             </i>
           </small>{" "}
         </center>
