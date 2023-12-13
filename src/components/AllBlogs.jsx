@@ -72,7 +72,7 @@ function AllBlogs({ username }) {
     <div className="m-2">
       {username}
       <center>
-        <h2 className="heading rounded text-white w-100 p-2 m-2">All Blogs</h2>
+        <h2 className="heading rounded text-white w-100 p-2">All Blogs</h2>
       </center>
 
       <div className="row">

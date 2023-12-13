@@ -54,7 +54,7 @@ function Register() {
                 {warning}
                 {register}
                 <marquee><big>Welcome! <b>register here to use our services.</b> </big></marquee>
-                <form onSubmit={handleSubmit} className='m-4 bshadow p-4'>
+                <form onSubmit={handleSubmit} className='m-4 bshadow p-4 col-lg-3 col-md-4'>
                     <div className="mb-3">
                         <input value={name} required onChange={(e) => setName(e.target.value)} placeholder='Enter username' type="text" className="form-control" />
                     </div>

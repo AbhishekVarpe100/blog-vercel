@@ -31,7 +31,7 @@ function CreateBlog({ username }) {
     return (
         <div>
             <center className='p-2 m-2' id='center'>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="col-md-4 col-lg-4">
                     <input value={blogname} required onChange={(e)=>setBLogName(e.target.value)} className='form-control' placeholder='Enter blog title' type="text" /><br />
                     <textarea value={description} required onChange={(e)=>setDescription(e.target.value)} className='form-control' placeholder='Blog description' cols="30" rows="10"></textarea><br />
                     <br />
