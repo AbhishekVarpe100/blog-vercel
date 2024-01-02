@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import './Style.css'
 import './Shadow.css'
 import axios from 'axios';
+import Loading from './Loading';
 function YourBlogs({username}) {
 
     const [data, setBlog] = useState([]);
-
+    const [load,setLoad]=useState(true);
     const blogData = () => {
         axios.get('https://abhishekvarpeblog.vercel.app/getblog/'+username)
             .then(blog => {
@@ -19,6 +20,10 @@ function YourBlogs({username}) {
 
     useEffect(() => {
       blogData();
+
+      setTimeout(() => {
+        setLoad(false)
+      }, 4000);
     }, [])
 
     // const handleDelete = (name) => {
@@ -44,6 +49,10 @@ function YourBlogs({username}) {
             <h2 className='heading rounded text-white w-100 p-2 m-2'>Your Blogs</h2>
             </center>
 
+            {load? <Loading></Loading>
+
+            :
+
             <div className='row'>
 
                 {data.length != 0 ? data.map((item) => (
@@ -64,6 +73,10 @@ function YourBlogs({username}) {
 
                 )) : <div className='alert alert-warning'>🙁 Oops! <i> <b>You haven't posted any blog yet</b> </i> </div>}
             </div>
+            
+            }
+
+            
             <footer>
             <center>&copy; <small>All rights reserved by <i><b>abc</b></i></small> </center>
         </footer>

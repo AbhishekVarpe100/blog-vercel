@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import "./Style.css";
 import axios from "axios";
 import "./Shadow.css";
+import Loading from "./Loading";
 function AllBlogs({ username }) {
   const [data, setBlog] = useState([]);
   const [likes, likeCount] = useState(0);
-  var [user,setUser]=useState('');
-  var [blog,setblogName]=useState('');
+  var [user, setUser] = useState('');
+  const [load, setLoad] = useState(true);
+  var [blog, setblogName] = useState('');
   const blogData = () => {
     axios
       .get("https://abhishekvarpeblog.vercel.app/getblogs")
@@ -20,6 +22,10 @@ function AllBlogs({ username }) {
 
   useEffect(() => {
     blogData();
+
+    setTimeout(() => {
+      setLoad(false)
+    }, 4000);
   }, []);
 
   const handleDelete = (id, username) => {
@@ -36,18 +42,18 @@ function AllBlogs({ username }) {
   };
 
 
-  const like=(userName,blogname)=>{
-    axios.post("https://abhishekvarpeblog.vercel.app/getlikes",{userName,blogname})
-          .then((res) => {
-            likeCount(res.data.likeCount);
-            // setUser(res.data.userName);
-            // setblogName(res.data.blogname);
+  const like = (userName, blogname) => {
+    axios.post("https://abhishekvarpeblog.vercel.app/getlikes", { userName, blogname })
+      .then((res) => {
+        likeCount(res.data.likeCount);
+        // setUser(res.data.userName);
+        // setblogName(res.data.blogname);
 
-            alert(`${likes} likes for this post `);
-            // alert(`${user} likes for this post `);
-            // alert(`${blog} likes for this post `);
-          })
-          .catch((err) => console.log(err));
+        alert(`${likes} likes for this post `);
+        // alert(`${user} likes for this post `);
+        // alert(`${blog} likes for this post `);
+      })
+      .catch((err) => console.log(err));
   }
 
 
@@ -59,14 +65,14 @@ function AllBlogs({ username }) {
       .post("https://abhishekvarpeblog.vercel.app/like", { username, userName, blogname });
   };
 
-//   const getCount = () => {
-//     axios
-//       .get("http://localhost:3000/cartcount")
-//       .then((count) => {
-//         cartCount(count.data.cartCount);
-//       })
-//       .catch((err) => console.log(err));
-//   };
+  //   const getCount = () => {
+  //     axios
+  //       .get("http://localhost:3000/cartcount")
+  //       .then((count) => {
+  //         cartCount(count.data.cartCount);
+  //       })
+  //       .catch((err) => console.log(err));
+  //   };
 
   return (
     <div className="m-2">
@@ -75,17 +81,23 @@ function AllBlogs({ username }) {
         <h2 className="heading rounded text-white w-100 p-2">All Blogs</h2>
       </center>
 
-      <div className="row">
-      
+
+
+      {load ? <Loading></Loading>
+
+        :
+
+        <div className="row">
+
         {data.length != 0 ? (
 
           data.map((item) => (
-            
+
             <div
               className=" col-md-3 col-lg-3 myimagetemplate1 bl"
               key={item.id}
             >
-            
+
               <hr />
               <div className="card-body">
                 <p className="card-title w-100">
@@ -115,40 +127,40 @@ function AllBlogs({ username }) {
                   {item.description}
                 </p>
 
-<div className="d-flex justify-content-around">
-<span>
-                <h3 onClick={() => handleLike(item.username, item.blogname)}>
+                <div className="d-flex justify-content-around">
                   <span>
-                    <i
-                      title="Like"
-                      className="fa-regular fa-thumbs-up"
-                      id="like"
-                    ></i>
-                  </span>
-                </h3>{" "}
-                <span>like</span>
+                    <h3 onClick={() => handleLike(item.username, item.blogname)}>
+                      <span>
+                        <i
+                          title="Like"
+                          className="fa-regular fa-thumbs-up"
+                          id="like"
+                        ></i>
+                      </span>
+                    </h3>{" "}
+                    <span>like</span>
 
-</span>
-<span>
-                <h3 onClick={() => handleLike(item.username, item.blogname)}>
+                  </span>
                   <span>
-                    <i
-                      title="Like"
-                      className="fa-regular fa-thumbs-down"
-                      id="like"
-                    ></i>
-                  </span>
-                </h3>{" "}
-                <span>dislike</span>
+                    <h3 onClick={() => handleLike(item.username, item.blogname)}>
+                      <span>
+                        <i
+                          title="Like"
+                          className="fa-regular fa-thumbs-down"
+                          id="like"
+                        ></i>
+                      </span>
+                    </h3>{" "}
+                    <span>dislike</span>
 
-</span>
-</div>
+                  </span>
+                </div>
 
                 <p className="">
                   <small>how many likes ?{" "}</small>
-                  
+
                   <u>
-                     <span className="text-primary btn btn-sm " onClick={()=>like(item.username,item.blogname)}>see <i class="fa fa-eye" aria-hidden="true"></i></span>
+                    <span className="text-primary btn btn-sm " onClick={() => like(item.username, item.blogname)}>see <i class="fa fa-eye" aria-hidden="true"></i></span>
                   </u>{" "}
                 </p>
               </div>
@@ -181,6 +193,12 @@ function AllBlogs({ username }) {
           <div className="alert alert-warning">🙁 Nobody posted a blog</div>
         )}
       </div>
+    
+
+
+}
+
+      
 
       <footer>
         <center>
